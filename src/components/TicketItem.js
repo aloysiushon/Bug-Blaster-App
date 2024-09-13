@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TicketItem(ticket, dispatch) {
+export default function TicketItem({ ticket, dispatch }) {
   const { id, title, description, priority } = ticket;
 
   const priorityClass = {
