@@ -20,6 +20,12 @@ export default function TicketForm() {
   const handleSubmit = (e) => {
     //This to prevent page to reload after form submission.
     e.preventDefault();
+    const ticketData = {
+      id: new Date().toISOString(),
+      title,
+      description,
+      priority,
+    };
     clearForm();
   };
 
