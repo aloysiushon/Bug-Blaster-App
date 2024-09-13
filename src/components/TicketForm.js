@@ -26,6 +26,8 @@ export default function TicketForm({ dispatch }) {
       description,
       priority,
     };
+    // console.log(ticketData);
+    //this will log the values inserted when form is submitted
 
     dispatch({
       type: "ADD_TICKET",

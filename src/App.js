@@ -8,6 +8,7 @@ function App() {
   const initialState = { tickets: [] };
 
   const [state, dispatch] = useReducer(ticketReducer, initialState);
+  // console.log(state); //It returns tickets object inserted in the TicketForm
 
   return (
     <div className="App">
