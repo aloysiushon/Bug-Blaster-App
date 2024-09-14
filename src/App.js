@@ -4,10 +4,9 @@ import TicketForm from "./components/TicketForm";
 import "./styles.css";
 import ticketReducer from "./reducers/ticketReducer";
 import TicketList from "./components/TicketList";
-import TicketItem from "./components/TicketItem";
 
 function App() {
-  const initialState = { tickets: [] };
+  const initialState = { tickets: [], editingTicket: null };
 
   const [state, dispatch] = useReducer(ticketReducer, initialState);
   // console.log(state);
@@ -17,7 +16,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Bug Blaster</h1>
-        <TicketForm dispatch={dispatch} />
+        <TicketForm dispatch={dispatch} editingTicket={state.editingTicket} />
 
         {/* this && operator is refer to then - if have ticket the render h2 */}
         {state.tickets.length > 0 && (
